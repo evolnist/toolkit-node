@@ -1,0 +1,130 @@
+Info	Input	data/extract/list.tsv
+Info	Rule	data/extract/rule.tsv
+Info	Output	data/extract/result.tsv
+Info	Extract
+Info	Read input file	data/extract/list.tsv
+Info	Read rule file	data/extract/rule.tsv
+Info	Start parallel processing
+Warning	Not such file dummy.html of line 1
+Info	Process	index.html
+Info	Process	campaign.html
+Info	Process	facility.html
+Info	Process	feature.html
+Info	Process	cycle.html
+Info	Process	staff.html
+Info	Process	price.html
+Info	Process	impression.html
+Info	Process	access.html
+Info	Process	inquiry/input.html
+Info	Not match rule of line 4 on inquiry/input.html
+Info	Process	inquiry/confirm.html
+Info	Not match rule of line 4 on inquiry/confirm.html
+Info	Process	inquiry/complete.html
+Info	Not match rule of line 4 on inquiry/complete.html
+Info	Write output file	data/extract/result.tsv
+Info	Complete	12 record processed
+
+Info	Input	data/extract/input
+Info	Rule	data/extract/rule.tsv
+Info	Output	data/extract/result_directory.tsv
+Info	Extract
+Info	Read input directory	data/extract/input
+Info	Filtered input data
+Info	Read rule file	data/extract/rule.tsv
+Info	Start parallel processing
+Info	Process	access.html
+Info	Process	campaign.html
+Info	Process	cycle.html
+Info	Process	facility.html
+Info	Process	feature.html
+Info	Process	impression.html
+Info	Process	index.html
+Info	Process	inquiry/complete.html
+Info	Not match rule of line 4 on inquiry/complete.html
+Info	Process	inquiry/confirm.html
+Info	Not match rule of line 4 on inquiry/confirm.html
+Info	Process	inquiry/input.html
+Info	Not match rule of line 4 on inquiry/input.html
+Info	Process	price.html
+Info	Process	staff.html
+Info	Write output file	data/extract/result_directory.tsv
+Info	Modified output data
+Info	Complete	12 record processed
+
+Info	Input	data/generate/list.tsv
+Info	Template	data/generate/template_detail.html
+Info	Output	data/generate/result/
+Info	Generate
+Info	Read input file	data/generate/list.tsv
+Info	Modifiered input data
+Info	Start parallel processing
+Info	Process	kwmt
+Info	Process	baba
+Info	Write output file	data/generate/result/kwmt.html
+Info	Write output file	data/generate/result/baba.html
+Info	Complete	2 record processed
+
+Info	Input	data/generate/list.tsv
+Info	With	pref(data/generate/pref.tsv)
+Info	With	gender(data/generate/gender.tsv)
+Info	Template	data/generate/template_list.html
+Info	Output	data/generate/result/index.html
+Info	Generate
+Info	Read with file	data/generate/gender.tsv
+Info	Read with file	data/generate/pref.tsv
+Info	Read input file	data/generate/list.tsv
+Info	Process
+Info	Write output file	data/generate/result/index.html
+Info	Complete	1 record processed
+
+Info	Input	list.tsv
+Info	Rule	rule.tsv
+Info	Output	result
+Info	Update
+Error	Not implemented yet!
+
+Info	Input	list.tsv
+Info	Output	result
+Info	Copy
+Error	Not implemented yet!
+
+Info	Input	data/extract/list.tsv
+Info	Batch
+Info	Read input file	data/extract/list.tsv
+Info	Start parallel processing
+Info	Process	dummy.html
+Info	Process	index.html
+Info	Process	campaign.html
+Info	Process	facility.html
+Info	Process	feature.html
+Info	Process	cycle.html
+Info	Process	staff.html
+Info	Process	price.html
+Info	Process	impression.html
+Info	Process	access.html
+Info	Process	inquiry/input.html
+Info	Process	inquiry/confirm.html
+Info	Process	inquiry/complete.html
+Info	Complete	13 record processed
+
+Log	Config	
+Config {
+  config:
+   { input:
+      { type: 'tsv',
+        prefix: 'data/extract/input/',
+        field: 'filename',
+        path: 'data/extract/list.tsv' },
+     rule: { path: 'data/extract/rule.tsv' },
+     output: { type: 'tsv', path: 'data/extract/result.tsv' } } }
+Log	Config.input.path	data/extract/list.tsv
+Log	Config.output	
+{ type: 'tsv', path: 'data/extract/result.tsv' }
+Log	Config	
+Config {
+  config:
+   { input: { path: 'data/generate/list.tsv', type: 'tsv' },
+     with:
+      { gender: 'data/generate/gender.tsv',
+        pref: 'data/generate/pref.tsv' },
+     template: { path: 'data/generate/template_list.html' } } }

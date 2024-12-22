@@ -1,0 +1,9 @@
+Thumbs.db
+.DS_Store
+_notes
+
+*_bk*
+
+node_modules/
+
+projects/*/*

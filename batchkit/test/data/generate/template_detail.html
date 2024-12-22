@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title><%= name %>の自己紹介</title>
+</head>
+<body>
+<h1>EVOLNI</h1>
+<h2><%= name %>の自己紹介</h2>
+<dl>
+	<dt>【<%= name %>とは】</dt>
+	<dd><%- comment.replace(/\\n/g, '<br>') %></dd>
+</dl>
+</body>
+</html>
+

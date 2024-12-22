@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>スタッフの自己紹介</title>
+</head>
+<body>
+<h1>EVOLNI</h1>
+<h2>スタッフの自己紹介</h2>
+<ul>
+	<% for (let record of records) { -%>
+	<li>
+		<dl>
+			<dt><a href="<%= record.id %>.html"><%= record.name %></a></dt>
+			<dd><%= pref[record.fromPref].name %>出身。<%= pref[record.pref].name %>在住。<%= gender[record.gender].name %>。</dd>
+		</dl>
+	</li>
+	<% } -%>
+</ul>
+</body>
+</html>

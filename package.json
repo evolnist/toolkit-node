@@ -1,0 +1,14 @@
+{
+  "name": "EvolniToolkit",
+  "version": "0.0.1",
+  "description": "EVOLNI Toolkit on Node.js",
+  "dependencies": {
+    "comma-separated-values": "^3.6.4",
+    "ejs": "^2.7.4",
+    "fs-extra": "^7.0.1",
+    "glob": "^7.1.6",
+    "lodash": "^4.17.15"
+  },
+  "private": true,
+  "license": "MIT"
+}

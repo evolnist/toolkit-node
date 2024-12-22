@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/common.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Imagetoolbar" content="no" />
+<!-- InstanceBeginEditable name="doctitle" --><title>お問い合わせ | チャイルドガーデン 錦糸町駅前（託児所）</title><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name="Keywords" content="お問い合わせ,見学,説明会,予約,質問,相談,電話" />
+<meta name="description" content="オンライン" /><link href="../css/base.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/inquiry.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/print.css" rel="stylesheet" type="text/css" media="print" />
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<a id="pagetop" name="pagetop"></a>
+	<div id="page">
+		<div id="container">
+<!--ヘッダーここから-->
+			<div id="header">
+				<div id="title">
+					<div id="desc"><p>錦糸町駅から徒歩3分。英語教室、リズム教室など楽しみながら成長していける保育所。</p></div>
+					<div id="logo"><a href="http://www.child-garden.jp/">チャイルドガーデン</a></div>
+				</div>
+				<div id="hnavi">
+					<div id="login"><a href="http://ameblo.jp/child-garden-4koma/" target="_blank">チャイルドガーデン4コマブログ</a></div>
+				</div>
+				<div class="clear">&nbsp;</div>
+			</div>
+<!--ヘッダーここまで-->
+<!--コンテンツここから-->
+			<div id="main">
+				<div id="contents">
+					<!-- InstanceBeginEditable name="path" --><div id="path"><a href="index.html">トップページ</a>&nbsp;&gl;&nbsp;</div><!-- InstanceEndEditable -->
+					<!-- InstanceBeginEditable name="contents" -->
+				<div class="section" id="inquiry">
+					<h2>お問い合わせ</h2>
+					<div class="sectionBody">
+						<form action="index.php" method="post">
+							<p><strong class="require">※</strong>は必須項目となります。 <a href="https://secure.evol-ni.com/child-garden/privacy/" onclick="window.open(this.href, 'popup', 'toolbar=0,resizable=yes,scrollbars=yes,menubar=0,directories=0,status=0,location=0,width=500,height=500');return false;">個人情報の取り扱いについてはこちら</a></p>
+							<table cellspacing="0">
+								<tbody>
+									<tr id="rowName">
+										<th>お名前 <strong class="require">※</strong></th>
+										<td>
+											{if $errors.name}<p class="error">{$errors.name|escape}</p>{/if}
+											<p class="field"><label for="formNameLast">姓</label> <input type="text" name="form[nameLast]" id="formNameLast" value="{$form.nameLast|escape}" /></p>
+											<p class="field"><label for="formNameFirst">名</label> <input type="text" name="form[nameFirst]" id="formNameFirst" value="{$form.nameFirst|escape}" /></p>
+										</td>
+									</tr>
+									<tr id="rowKana">
+										<th>お名前（カナ） <strong class="require">※</strong></th>
+										<td>
+											{if $errors.kana}<p class="error">{$errors.kana|escape}</p>{/if}
+											<p class="field"><label for="formKanaLast">セイ</label> <input type="text" name="form[kanaLast]" id="formKanaLast" value="{$form.kanaLast|escape}" /></p>
+											<p class="field"><label for="formKanaFirst">メイ</label> <input type="text" name="form[kanaFirst]" id="formKanaFirst" value="{$form.kanaFirst|escape}" /></p>
+										</td>
+									</tr>
+									<tr id="rowMail">
+										<th><label for="formMail">メールアドレス</label> <strong class="require">※</strong></th>
+										<td>
+											{if $errors.mail}<p class="error">{$errors.mail|escape}</p>{/if}
+											<p class="field"><input type="text" name="form[mail]" id="formMail" value="{$form.mail|escape}" /></p>
+											<p class="note">お電話でのお問い合わせは 03-3633-5920 まで<br />
+											（受付時間：平日8時～21時）</p>
+										</td>
+									</tr>
+									<tr id="rowDetail">
+										<th><label for="formDetail">お問い合わせ内容</label> <strong class="require">※</strong></th>
+										<td>
+											{if $errors.detail}<p class="error">{$errors.detail|escape}</p>{/if}
+											<p class="field"><textarea name="form[detail]" id="formDetail">{$form.detail|escape}</textarea></p>
+										</td>
+									</tr>
+									<!--
+									<tr id="rowDate">
+										<th>見学・説明会ご希望日 5月25日以降の日時でお願いします</th>
+										<td>
+											{if $errors.date}<p class="error">{$errors.date|escape}</p>{/if}
+											<p class="field"><label for="formDate1">第一希望日時</label> <input type="text" name="form[date1]" id="formDate1" value="{$form.date1|escape}" /> 例：5月30日 10時～</p>
+											<p class="field"><label for="formDate2">第二希望日時</label> <input type="text" name="form[date2]" id="formDate2" value="{$form.date2|escape}" /> 例：5月31日 11時～</p>
+											<p class="field"><label for="formDate3">第三希望日時</label> <input type="text" name="form[date3]" id="formDate3" value="{$form.date3|escape}" /> 例：6月6日 11時～</p>
+										</td>
+									</tr>
+									-->
+								</tbody>
+							</table>
+							<div class="button">
+								<input type="hidden" name="action" value="confirm" />
+								<p id="btnConfirm"><input type="submit" name="submit" value="送信内容を確認する" /></p>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="pagetop"><a href="#pagetop">このページのTOPへ</a></div>
+				<!-- InstanceEndEditable -->
+				</div>
+				<div id="lnavi">
+					<!-- InstanceBeginEditable name="lnavi" --><!-- #BeginLibraryItem "/Library/lnavi_lower.lbi" -->
+<div id="lnavi">
+	<!--
+	<p id="ontheday" class="guide">一時保育の当日連絡もお受けいたします。(15時～21時まで)</p>
+	-->
+	<div id="contact">
+		<p id="title" class="text">お問い合わせはこちら</p>
+		<p id="tel" class="text">03-3633-5920</p>
+		<p id="hours" class="text">受付時間：平日 7時30分～21時まで</p>
+		<div id="btnContact"><a href="https://secure.evol-ni.com/child-garden/inquiry/" target="_blank">お問い合わせフォーム</a></div>
+	</div>
+	<p id="noboard" class="guide">セキュリティのため看板等を出しておりません。迷われた方はご連絡ください。</p>
+	<ul id="menu">
+		<li id="lnavi01" class="list"><a href="http://www.child-garden.jp/">TOPページ</a></li>
+		<li id="lnavi02" class="list"><a href="../facility.html">保育所の様子</a></li>
+		<li id="lnavi03" class="list"><a href="../feature.html">特長・こだわり</a></li>
+		<li id="lnavi04" class="list"><a href="../cycle.html">１日の流れ</a></li>
+		<li id="lnavi05" class="list"><a href="../staff.html">先生の紹介</a></li>
+		<li id="lnavi06" class="list"><a href="../price.html">保育ご利用料金</a></li>
+		<li id="lnavi07" class="list"><a href="../access.html">アクセス</a></li>
+	</ul>
+</div><!-- #EndLibraryItem --><!-- InstanceEndEditable -->
+				</div>
+				<div class="clear">&nbsp;</div>
+			</div>
+<!--コンテンツここまで-->
+			<div id="blog">
+				<p><a href="http://ameblo.jp/child-garden/" target="_blank">今日も１日楽しかったね！ ４コマblog</a></p>
+			</div>
+<!--フッターここから-->
+			<div id="footer">
+				<div id="copyright">Copyright c2009 Child Garden 錦糸町駅前. All Rights Reserved.</div>
+			</div>
+<!--フッターここまで-->
+		</div>
+	</div>
+<!-- Google Analytics -->
+<script type="text/javascript"><!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+--></script>
+<script type="text/javascript"><!--
+var pageTracker = _gat._getTracker("UA-2394081-6");
+pageTracker._trackPageview();
+//--></script>
+<!-- /Google Analytics -->
+
+<!-- Yahoo Access Analysis -->
+<script type="text/javascript" src="https://s.yimg.jp/images/analytics/js/ywa.js"></script>
+<script type="text/javascript">
+var YWATracker = YWA.getTracker("1000293190306");
+YWATracker.addExcludeProtocol("file:");
+YWATracker.submit();
+</script>
+<noscript>
+<div><img src="https://by.analytics.yahoo.co.jp/p.pl?a=1000293190306&amp;js=no" width="1" height="1" alt="" /></div>
+</noscript>
+<!-- /Yahoo Access Analysis -->
+</body>
+<!-- InstanceEnd --></html>

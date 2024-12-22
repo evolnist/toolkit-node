@@ -1,0 +1,5 @@
+silent	name	item
+	title	/<title>(.*?)<\/title>/
+	keywords	/<meta name="Keywords" content="(.*?)" \/>/i
+	description	/<meta name="Description" content="(.*?)" \/>/i
+	h1	/<h1.*>(.+?)<\/.*h1>/
